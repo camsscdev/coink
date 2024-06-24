@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="2">
+          <img
+            (click)="back()"
+            class="icon-arrow-back ion-mg-xs-left ion-mg-xs-top"
+            src="../../../assets/icon/backward-arrow.svg"
+          />
+        </ion-col>
+        <ion-col size="8">
+          <h5 class="font-weight-bold ion-color-font-secondary ion-text-center">
+            {{titleStep}}
+          </h5>
+        </ion-col>
+        <ion-col size="12">
+          <ion-stepper [step]="step" [title]="titleStep"></ion-stepper>
+        </ion-col> </ion-row
+    ></ion-grid>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  @switch (step) { @case (1) {
+  <app-phone (step)="next($event)" (title)="handleNameChange($event)" />
+  } @case (2) {
+  <app-user-data (step)="next($event)" (title)="handleNameChange($event)" />}
+  @default { <app-contract [step]="step" (title)="handleNameChange($event)" />}
+  }
+</ion-content>

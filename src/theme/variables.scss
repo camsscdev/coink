@@ -1,2 +1,11 @@
 // For information on how to create your own theme, please see:
 // http://ionicframework.com/docs/theming/
+:root {
+  --ion-color-success: #1eea00;
+  --ion-color-secondary: #004b40;
+  --ion-font-family: "monserrat";
+}
+
+body {
+  font-family: "monserrat";
+}

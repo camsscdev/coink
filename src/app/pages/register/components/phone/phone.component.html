@@ -1,0 +1,38 @@
+<ion-content>
+  <ion-grid class="ion-padding">
+    <ion-row class="ion-align-items-center">
+      <ion-col size="3" class="ion-text-center">
+        <img
+          src="../../../../../assets/img/Oink.svg"
+          alt="Logo"
+          class="ion-mg-lg-top"
+        />
+      </ion-col>
+      <ion-col size="9" class="ion-mg-lg-top">
+        <ion-label
+          [innerHTML]="'PHONE_COMPONENT.TITLE' | translate"
+        ></ion-label>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <hr class="ion-separator" />
+
+  <form
+    [formGroup]="phoneForm"
+    (ngSubmit)="onSubmit()"
+    class="ion-mg-sm-top ion-padding"
+  >
+    <ion-item class="ion-box-shadow-input">
+      <ion-input
+        formControlName="phone"
+        type="tel"
+        placeholder="XXXXXXXXXX"
+        maxlength="10"
+        inputmode="numeric"
+        class="ion-text-center font-lg"
+        required
+      >
+      </ion-input>
+    </ion-item>
+  </form>
+</ion-content>

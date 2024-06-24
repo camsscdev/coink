@@ -1,0 +1,230 @@
+<ion-content class="ion-padding">
+  <ion-grid>
+    <ion-row class="ion-align-items-center">
+      <ion-col size="3">
+        <img src="../../../assets/img/Oink-M.svg" alt="Logo" />
+      </ion-col>
+      <ion-col size="9">
+        <h4
+          [innerHTML]="'USERDATA_COMPONENT.TITLE' | translate"
+          class="ion-color-font-secondary font-weight-bold font-md"
+        ></h4>
+        <p
+          [innerHTML]="'USERDATA_COMPONENT.SUBTITLE' | translate"
+          class="font-sm ion-pd-md-right"
+        ></p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <hr class="ion-separator" />
+
+  <form [formGroup]="formUser">
+    <h5 class="ion-mg-xs-top ion-mg-xs-left font-weight-bold">
+      Documento de identidad
+    </h5>
+    <ion-item class="ion-mg-xs-top">
+      <select
+        class="ion-select"
+        name="fruit"
+        required
+        formControlName="documentType"
+      >
+        <option value="" disabled>Tipo de documento</option>
+        @for (document of documentTypes; track document.id) {
+
+        <option [value]="document.id">
+          {{ document.description }}
+        </option>
+        }
+      </select>
+    </ion-item>
+    @if ( f['documentType'].invalid && f['documentType'].errors?.['required']) {
+    <ion-text color="danger" class="font-xs ion-mg-xs-left">
+      Campo requerido
+    </ion-text>
+    }
+
+    <ion-item class="ion-mg-xs-top">
+      <ion-input
+        formControlName="documentNumber"
+        maxlength="10"
+        minlength="8"
+        required
+        label="Número de documento"
+        label-placement="floating"
+      ></ion-input>
+    </ion-item>
+    @if ( f['documentNumber'].touched &&
+    f['documentNumber'].errors?.['required']) {
+    <ion-text color="danger" class="font-xs ion-mg-xs-left">
+      Campo requerido
+    </ion-text>
+    }
+
+    <ion-item class="ion-mg-xs-top">
+      <ion-input
+        type="date"
+        formControlName="documentShipping"
+        label="Fecha de expedición del documento"
+        labelPlacement="floating"
+        placeholder="dd/mm/aaaa"
+        required
+      >
+        <ion-note slot="end" class="ion-note-icon"
+          ><img
+            src="../../../assets/icon/calendario.png"
+            class="ion-icon-contrast"
+            width="25px"
+            alt=""
+        /></ion-note>
+        @if (f['documentShipping'].touched && f['documentShipping'].valid ) {
+        <ion-note slot="end" class="ion-margin-top-xs"
+          ><img src="../../../assets/icon/Check.svg" alt=""
+        /></ion-note>
+
+        }</ion-input
+      >
+    </ion-item>
+    @if ( f['documentShipping'].touched &&
+    f['documentShipping'].errors?.['required']) {
+    <ion-text color="danger" class="font-xs ion-mg-xs-left">
+      Campo requerido
+    </ion-text>
+    }
+
+    <ion-item class="ion-mg-xs-top">
+      <ion-input
+        type="date"
+        formControlName="dateBirth"
+        label="Fecha de nacimiento"
+        labelPlacement="floating"
+        placeholder="dd/mm/aaaa"
+        required
+      >
+        <ion-note slot="end" class="ion-note-icon"
+          ><img
+            src="../../../assets/icon/calendario.png"
+            class="ion-icon-contrast"
+            width="25px"
+            alt=""
+        /></ion-note>
+      </ion-input>
+    </ion-item>
+    @if ( f['dateBirth'].touched && f['dateBirth'].errors?.['required']) {
+    <ion-text color="danger" class="font-xs ion-mg-xs-left">
+      Campo requerido
+    </ion-text>
+    }
+
+    <ion-item class="ion-mg-xs-top">
+      <select
+        class="ion-select"
+        name="gender"
+        required
+        formControlName="gender"
+      >
+        <option value="" disabled>Género</option>
+        @for (gender of genders; track gender.id) {
+
+        <option [value]="gender.id">
+          {{ gender.description }}
+        </option>
+        }
+      </select>
+    </ion-item>
+    @if ( f['gender'].touched && f['gender'].errors?.['required']) {
+    <ion-text color="danger" class="font-xs ion-mg-xs-left">
+      Campo requerido
+    </ion-text>
+    }
+
+    <h5 class="ion-mg-sm-top ion-mg-xs-left font-weight-bold">
+      Configura tu cuenta
+    </h5>
+
+    <ion-item class="ion-mg-xs-top">
+      <ion-input
+        type="email"
+        label="Correo electrónico"
+        labelPlacement="floating"
+        formControlName="email"
+        required
+        autocomplete="off"
+      ></ion-input>
+      <ion-icon
+        *ngIf="f['email'].touched && f['email'].valid"
+        name="checkmark-circle"
+        slot="end"
+      ></ion-icon>
+    </ion-item>
+    @if ( f['email'].touched && f['email'].errors?.['required']) {
+    <ion-text color="danger" class="font-xs ion-mg-xs-left">
+      Campo requerido
+    </ion-text>
+    }
+
+    <ion-item class="ion-mg-xs-top">
+      <ion-input
+        label="Confirmar Correo electrónico"
+        labelPlacement="floating"
+        type="email"
+        formControlName="repeatEmail"
+        autocomplete="off"
+        required
+      ></ion-input>
+    </ion-item>
+    @if (f['repeatEmail'].errors?.['notEqual']) {
+    <ion-text color="danger" class="font-xs ion-mg-xs-left">
+      Correo no coincide
+    </ion-text>
+    } @else if( f['repeatEmail'].touched &&
+    f['repeatEmail'].errors?.['required']){
+    <ion-text color="danger" class="font-xs ion-mg-xs-left">
+      Campo requerido
+    </ion-text>
+    }
+
+    <ion-item class="ion-mg-xs-top">
+      <ion-input
+        type="password"
+        label="PIN de seguridad"
+        labelPlacement="floating"
+        formControlName="securityPin"
+        maxlength="4"
+        required
+      ></ion-input>
+    </ion-item>
+    @if ( f['securityPin'].touched && f['securityPin'].errors?.['required']) {
+    <ion-text color="danger" class="font-xs ion-mg-xs-left">
+      Campo requerido
+    </ion-text>
+    }
+
+    <ion-item class="ion-mg-xs-top">
+      <ion-label position="floating">Confirmar PIN de seguridad</ion-label>
+      <ion-input
+        type="password"
+        formControlName="securityPinRepeat"
+        required
+      ></ion-input>
+    </ion-item>
+    @if (f['securityPinRepeat'].touched &&
+    f['securityPinRepeat'].errors?.['notEqual']) {
+    <ion-text color="danger" class="font-xs ion-mg-xs-left">
+      Pin no coincide
+    </ion-text>
+    }
+
+    <ion-button
+      class="ion-mg-sm-top"
+      expand="block"
+      shape="round"
+      [color]="!formUser.valid ? 'light' : 'success'"
+      [disabled]="!formUser.valid"
+      (click)="onNext()"
+    >
+      {{ "BUTTONS.NEXT" | translate }}
+    </ion-button>
+  </form>
+</ion-content>

@@ -1,0 +1,80 @@
+@font-face {
+  font-family: "monserrat";
+  src: url("../assets/fonts/Montserrat/static/Montserrat-Medium.ttf")
+    format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+// src/styles/typography.scss
+
+// Variables para fuentes
+$font-family-primary: "monserrat", sans-serif;
+
+// Variables para tamaños de fuente
+$font-size-xs: 0.75rem;
+$font-size-sm: 0.875rem;
+$font-size-md: 1rem;
+$font-size-lg: 1.25rem;
+$font-size-xl: 1.5rem;
+
+// Variables para grosor de fuente
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+
+// Variables para colores de fuente
+$color-font-primary: #1eea00;
+$color-font-secondary: #004b40;
+$color-font-tertiary: #ff5722;
+
+// Clases de utilidad para tipos de letra
+.font-primary {
+  font-family: $font-family-primary !important;
+}
+
+// Clases de utilidad para tamaños de fuente
+.font-xs {
+  font-size: $font-size-xs !important;
+}
+
+.font-sm {
+  font-size: $font-size-sm !important;
+}
+
+.font-md {
+  font-size: $font-size-md !important;
+}
+
+.font-lg {
+  font-size: $font-size-lg !important;
+}
+
+.font-xl {
+  font-size: $font-size-xl !important;
+}
+
+// Clases de utilidad para grosor de fuente
+.font-weight-light {
+  font-weight: $font-weight-light !important;
+}
+
+.font-weight-normal {
+  font-weight: $font-weight-normal !important;
+}
+
+.font-weight-bold {
+  font-weight: $font-weight-bold !important;
+}
+
+// Clases de utilidad para colores de fuente
+.ion-color-font-primary {
+  color: $color-font-primary !important;
+}
+
+.ion-color-font-secondary {
+  color: $color-font-secondary !important;
+}
+
+.ion-color-font-tertiary {
+  color: $color-font-tertiary !important;
+}

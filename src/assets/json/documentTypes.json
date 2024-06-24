@@ -1,0 +1,5 @@
+[
+  { "id": 1, "notation": "CC", "description": "Cédula de Ciudadanía" },
+  { "id": 2, "notation": "TI", "description": "Tarjeta de Identidad" },
+  { "id": 3, "notation": "CE", "description": "Cédula de extranjería" }
+]

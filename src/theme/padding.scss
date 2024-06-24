@@ -1,0 +1,71 @@
+// Definición de variables
+$padding-xs: 1rem;
+$padding-sm: 2rem;
+$padding-md: 3rem;
+$padding-lg: 4rem;
+
+// Padding
+.ion-pd-xs {
+  padding: $padding-xs !important;
+}
+.ion-pd-sm {
+  padding: $padding-sm !important;
+}
+.ion-pd-md {
+  padding: $padding-md !important;
+}
+.ion-pd-lg {
+  padding: $padding-lg !important;
+}
+
+.ion-pd-xs-top {
+  padding-top: $padding-xs !important;
+}
+.ion-pd-sm-top {
+  padding-top: $padding-sm !important;
+}
+.ion-pd-md-top {
+  padding-top: $padding-md !important;
+}
+.ion-pd-lg-top {
+  padding-top: $padding-lg !important;
+}
+
+.ion-pd-xs-bottom {
+  padding-bottom: $padding-xs !important;
+}
+.ion-pd-sm-bottom {
+  padding-bottom: $padding-sm !important;
+}
+.ion-pd-md-bottom {
+  padding-bottom: $padding-md !important;
+}
+.ion-pd-lg-bottom {
+  padding-bottom: $padding-lg !important;
+}
+
+.ion-pd-xs-left {
+  padding-left: $padding-xs !important;
+}
+.ion-pd-sm-left {
+  padding-left: $padding-sm !important;
+}
+.ion-pd-md-left {
+  padding-left: $padding-md !important;
+}
+.ion-pd-lg-left {
+  padding-left: $padding-lg !important;
+}
+
+.ion-pd-xs-right {
+  padding-right: $padding-xs !important;
+}
+.ion-pd-sm-right {
+  padding-right: $padding-sm !important;
+}
+.ion-pd-md-right {
+  padding-right: $padding-md !important;
+}
+.ion-pd-lg-right {
+  padding-right: $padding-lg !important;
+}

@@ -1,0 +1,25 @@
+{
+  "AUTH_TITLE": " LA ALCANCÍA QUE SIEMPRE TE ACOMPAÑA",
+  "DESCRIPTION": "Esta es una descripción.",
+  "BUTTONS": {
+    "REGISTER": "REGÍSTRATE",
+    "LOGIN": "INGRESA",
+    "CONTINUE": "CONTINUAR",
+    "NEXT": "SIGUIENTE",
+    "ACCEPT": "ACEPTAR"
+  },
+  "PHONE_COMPONENT": {
+    "TITLE": "Para comenzar, por favor ingresa  <strong> tu número celular</strong>."
+  },
+  "USERDATA_COMPONENT": {
+    "TITLE": "¿CUÁLES SON TUS DATOS?",
+    "SUBTITLE": "Ahora necesitamos saber algunos datos tuyos"
+  },
+  "CONTRACT_COMPONENT": {
+    "TITLE": " ESTAS MUY CERCA DE SER PARTE DE COINK.",
+    "SUBTITLE": "Solo es necesario que leas detenidamente el contrato que  encuentra al final de esta pantalla y lo aceptes.",
+    "CONTRACT_TITLE": "LO MÁS IMPORTANTE",
+    "CONTRACT_TEXT": " Para la apertura del Depósito de Bajo Monto en COINK debes ser una persona natural que de acuerdo con nuestra legislación vigente te encuentres en plena capacidad para adquirir derechos y contraer obligaciones. Abrirás una cuenta COINK de Bajo Monto la cual te permitirá tener un saldo hasta por 8 salarios mínimos en el mes y realizar débitos por el mismo valor. Si deseas sobrepasar estos límites debes solicitarnos la apertura de un Depósito Ordinario COINK Persona Natural. Solo puedes tener una enta COINK de Bajo Monto y podrás utilizar tu dispositivo móvil para consultar tu saldo, tus movimientos,realizar tus transacciones y administrar tu cuenta. Recuerda que no necesitas saldo mínimo ni monto inicial para su apertura.",
+    "TEXT_ACCEPT": "He leído ya acepto el contrato"
+  }
+}
