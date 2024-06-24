@@ -59,3 +59,7 @@ Verificar la Ejecución:
 
 La aplicación se abrirá automáticamente en el emulador o dispositivo físico.
 Puedes interactuar con la aplicación como lo harías en un dispositivo real.
+
+## APK
+
+Se encientra en la carpeta: android > app > coink.apk
